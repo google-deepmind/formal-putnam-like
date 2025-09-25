@@ -16,24 +16,6 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
-open scoped Topology
-
-
 /-
 Let $f \in L^p (\mathbb{R}^n) \cap L^q (\mathbb{R}^n)$ for some $0 < p < q < +\infty$. Define $\Psi : [p,q] \rightarrow \mathbb{R}$ by
 $$

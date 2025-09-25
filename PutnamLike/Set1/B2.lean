@@ -16,24 +16,6 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
-open scoped Topology
-
-
 /--
 Suppose that $u : \mathbb{R} \rightarrow \mathbb{R}$ is a function of $\mathcal{C}^1$-class that satisfies the following differential equation
 $$
