@@ -16,7 +16,7 @@ limitations under the License.
 
 import Mathlib
 
-open scoped Topology
+open scoped Real Topology
 
 abbrev putnam_like_set1_a5_solution : Filter ℝ := sorry
 -- 𝓝 π
