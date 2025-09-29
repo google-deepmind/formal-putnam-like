@@ -16,24 +16,10 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
-open scoped Topology
+open scoped Real Topology
 
 abbrev putnam_like_set1_a5_solution : Filter ℝ := sorry
+-- 𝓝 π
 
 /--
 Find the limit

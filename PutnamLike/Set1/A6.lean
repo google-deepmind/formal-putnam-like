@@ -16,24 +16,8 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
-open scoped Topology
-
 abbrev putnam_like_set1_a6_solution : Prop := sorry
+-- False
 
 /--
 Let $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ be a continuous function and let $r > 0$ be fixed. Suppose that

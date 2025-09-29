@@ -16,24 +16,8 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
-open scoped Topology
-
-abbrev putnam_like_set1_a2_solution : ℝ := sorry
+abbrev putnam_like_set1_a2_solution : ℕ → ℝ := sorry
+-- fun n ↦ (3 ^ (n + 1) - 1) / (2 ^ (n + 1)) - 1
 
 /-
 Compute the sum
@@ -44,5 +28,5 @@ $$
 theorem putnam_like_set1_a2 (n : ℕ) :
     ∑ k ≤ (n / 2 : ℕ), ∑ ℓ ∈ Finset.Icc (max 1 (2 * k)) n,
       (1 / 4 ^ k * ℓ.choose (2 * k) : ℝ)
-    = putnam_like_set1_a2_solution := by
+    = putnam_like_set1_a2_solution n := by
   sorry

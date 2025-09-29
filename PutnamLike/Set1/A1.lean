@@ -34,6 +34,7 @@ open scoped symmDiff
 open scoped Topology
 
 abbrev putnam_like_set1_a1_solution : ℕ := sorry
+-- 3
 
 /--
 Let $\mathbb{P}$ denote the set of all primes. Define

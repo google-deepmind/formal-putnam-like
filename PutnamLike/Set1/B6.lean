@@ -16,24 +16,10 @@ limitations under the License.
 
 import Mathlib
 
-open MeasureTheory
-open Polynomial
-open scoped Classical
-open scoped ENNReal
-open scoped EuclideanGeometry
-open scoped InnerProductSpace
-open scoped intervalIntegral
-open scoped List
-open scoped Matrix
-open scoped Nat
-open scoped NNReal
-open scoped Pointwise
-open scoped ProbabilityTheory
-open scoped Real
-open scoped symmDiff
 open scoped Topology
 
 abbrev putnam_like_set1_b6_solution : ℕ → ℝ → ℕ → Filter ℝ := sorry
+-- fun x₀ α β ↦ 𝓝 ((α * x₀ + ⌊α * x₀⌋) / (2 * α))
 
 /--
 Let $x_0 \in \mathbb{N}$, $\beta \in \mathbb{N}$ and $\alpha \in (0,\infty) \setminus \mathbb{Q}$ be such that $\beta - \alpha \in (0,1)$ and $\alpha^2 \in \mathbb{N}$. Consider the sequence
