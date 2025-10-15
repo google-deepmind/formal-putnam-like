@@ -16,7 +16,7 @@ limitations under the License.
 
 import Mathlib
 
-open Filter MeasureTheory Metric Real Topology
+open Filter MeasureTheory Metric Real Topology Nat
 
 abbrev putnam_like_set4_b6_solution : Prop := sorry
 -- True
@@ -32,8 +32,8 @@ in $\mathbb{R}^2$, centered at $x_0 \in \mathbb{R}^2$ of radius $r$?
 -/
 theorem putnam_like_set4_b6 :
     (∃ (z : ℕ → EuclideanSpace ℝ (Fin 2)),
-      ∀ φ : EuclideanSpace ℝ (Fin 2) → ℝ, Continuous φ →
+      ∀ «φ» : EuclideanSpace ℝ (Fin 2) → ℝ, Continuous φ →
       (∀ n ≠ 0, ∀ m ≠ 0, n ≠ m → Disjoint (ball (z n) (1 / n)) (ball (z m) (1 / m)))
-        ∧ Tendsto (fun n ↦ n / π * ∫ x in ball (z n) (1 / n), φ x) atTop (𝓝 0)) ↔
+        ∧ Tendsto (fun n ↦ n / π * ∫ x in ball (z n) (1 / n), «φ» x) atTop (𝓝 0)) ↔
     putnam_like_set4_b6_solution := by
   sorry

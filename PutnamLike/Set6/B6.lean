@@ -30,7 +30,7 @@ Show that $4p_n< q_n$ for infinitely many $n$.
 theorem putnam_like_set6_b6 {Ω : Type*} [MeasureSpace Ω]
     (X : ℕ → Ω → Fin 3 → Fin 3)
     (hX_unif : ∀ n, pdf.IsUniform (X n) {f | f.Bijective} ℙ Measure.count)
-    (hX_indep : iIndepFun inferInstance X)
+    (hX_indep : iIndepFun X)
     (Rhat Shat That : ℕ → Ω → ℕ)
     (Rhat_def : ∀ n ω, Rhat n ω = ∑ i ∈ Finset.range n, (X i ω 0 + 1))
     (Shat_def : ∀ n ω, Shat n ω = ∑ i ∈ Finset.range n, (X i ω 1 + 1))

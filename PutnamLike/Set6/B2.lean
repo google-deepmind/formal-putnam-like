@@ -28,7 +28,7 @@ probability that if each coin is tossed once, one gets an even number of heads?
 -/
 theorem putnam_like_set6_b2 {Ω : Type*} [MeasureSpace Ω] (n : ℕ)
     (toss : Fin n → Ω → Prop)
-    (toss_indep : iIndepFun inferInstance toss)
+    (toss_indep : iIndepFun toss)
     (toss_prob : ∀ m : Fin n, ℙ {ω | toss m ω} = (2 * m + 3 : ENNReal)⁻¹) :
     ℙ {ω | Even #{m | toss m ω}} = putnam_like_set6_b2_solution n := by
   sorry

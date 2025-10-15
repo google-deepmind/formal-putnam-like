@@ -18,7 +18,8 @@ import Mathlib
 
 open Affine
 
-notation "ℝ²" => EuclideanSpace ℝ (Fin 2)
+-- Low priority prevents this clashing with google-deepmind/formal-conjectures
+notation (priority := low) "ℝ²" => EuclideanSpace ℝ (Fin 2)
 
 /-- Solution: $\frac{\sqrt{2}}{2}$. -/
 abbrev putnam_like_set5_a6_solution : ℝ := sorry

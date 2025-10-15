@@ -48,7 +48,7 @@ are obtuse?
 -/
 theorem putnam_like_set6_a6
     {Ω : Type*} [MeasureSpace Ω] [IsProbabilityMeasure (ℙ : Measure Ω)] (P : Ω → Fin 2025 → EuclideanSpace ℝ (Fin 2))
-    (hP : Measurable P) (hP' : iIndepFun inferInstance (fun ω ↦ P ω ·))
+    (hP : Measurable P) (hP' : iIndepFun (fun ω ↦ P ω ·))
     (hP'' : ∀ i, pdf.IsUniform (P · i) (Metric.sphere (0 : EuclideanSpace ℝ (Fin 2)) 1) (ℙ : Measure Ω) μH[1]) :
     (ℙ { ω : Ω | IsConvexObtuse2025GonSet (P ω)}).toReal = putnam_like_set6_a6_solution := by
   sorry
