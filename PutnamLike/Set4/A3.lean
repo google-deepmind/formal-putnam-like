@@ -31,7 +31,7 @@ in $\mathbb{F}_p$? If yes, prove it. If not, then which implication doesn't hold
 -/
 theorem putnam_like_set4_a3
     (Good : ∀ n p, Matrix (Fin n) (Fin n) (ZMod p) → Prop)
-    (Good_def : ∀ n p A (hp : p.Prime), letI : Fact p.Prime := ⟨hp⟩
+    (Good_def : ∀ n (p : ℕ) A (hp : p.Prime), letI : Fact p.Prime := ⟨hp⟩
       Good n p A ↔ A.IsSymm ∧ A.charpoly.Splits (RingHom.id <| ZMod p))
     (PosEvalues : ∀ n p, Matrix (Fin n) (Fin n) (ZMod p) → Prop)
     (PosEvalues_def : ∀ p n A, PosEvalues n p A ↔ ∀ (μ : ZMod p),

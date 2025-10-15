@@ -23,6 +23,6 @@ Let $n$ be an odd number and let $e_1=1, e_2,\ldots, e_n$ be the $n$-th roots of
 -/
 theorem putnam_like_set5_a3 (n : ℕ) [NeZero n] (hn : Odd n)
     (e : Fin n → ℂ) (he : e 0 = 1)
-    (hehe : Set.range e = Polynomial.nthRootsFinset n ℂ) :
+    (hehe : Set.range e = Polynomial.nthRootsFinset n (1 : ℂ)) :
     ∏ ⟨i, j⟩ ∈ {x : Fin n × Fin n | x.1 < x.2}, (e i + e j) ^ 2 = 1 := by
   sorry

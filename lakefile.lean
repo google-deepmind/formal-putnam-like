@@ -30,5 +30,4 @@ package putnam_like where
 lean_lib PutnamLike where
   globs := #[.submodules `PutnamLike]
 
-require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
-
+require "leanprover-community" / "mathlib" @ "git#v4.22.0"
