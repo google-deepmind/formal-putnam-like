@@ -42,6 +42,6 @@ theorem putnam_like_set5_a6 :
     letI 𝓗 : Set ℝ² := {P | 0 < P 0 ∧ P 1 = 1 / P 0}
     -- The set of triangles `PQR` with `P, Q, R` as in the statement
     letI 𝓟 : Set (Triangle ℝ ℝ²) :=
-      {Δ | Δ.points 0 ∈ 𝓗 ∧ Δ.points 1 ∈ 𝓗 ∧ (T (Δ.points 0) : Set ℝ²) ∩ (T (Δ.points 1) : Set ℝ²) = {Δ.points 2}}
-     ⨅ Δ ∈ 𝓟, Δ.circumradius = putnam_like_set5_a6_solution := by
+      {t | t.points 0 ∈ 𝓗 ∧ t.points 1 ∈ 𝓗 ∧ (T (t.points 0) : Set ℝ²) ∩ (T (t.points 1) : Set ℝ²) = {t.points 2}}
+     ⨅ t ∈ 𝓟, t.circumradius = putnam_like_set5_a6_solution := by
   sorry
