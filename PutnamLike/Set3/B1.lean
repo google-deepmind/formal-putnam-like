@@ -24,7 +24,7 @@ $(n-1)$ actions there is only one number remaining, call it \emph{result}.
 Prove that if we start with the numbers $(1,2,\ldots,n)$ then the result is smaller then
 $\frac{n+1}2$.
 -/
-def putnam_like_set3_b1 (n : ℕ) (hn : 2 ≤ n) (seq : ℕ → ℕ → ℝ)
+theorem putnam_like_set3_b1 (n : ℕ) (hn : 2 ≤ n) (seq : ℕ → ℕ → ℝ)
     (hinit : ∀ i ∈ Finset.Icc 1 n, seq 0 i = i)
     (hseq :
       ∀ t ∈ Finset.Ico 0 (n - 1),
