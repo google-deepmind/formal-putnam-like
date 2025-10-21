@@ -35,9 +35,16 @@ theorem putnam_like_set3_b6 (n : ℕ)
     [NeZero n] (hn : 2 ≤ n)
     (A : Matrix (Fin <| 2 * n) (Fin <| 2 * n) ℝ)
     (hA : ∀ i, i + 1 ≠ 0 → A (i + 1) i = 1)
-    (hA' : ∀ i, i.val < n → A i (- 1) = n - 1 - i)
-    (hA'' : ∀ i, n ≤ i.val → A i (- 1) = n - i)
-    (hA''' : ∀ i j, i + 1 = 0 ∨ j ≠ -1 ∨ i ≠ j + 1 → A i j = 0) :
+    /- This hypothesis and the following one mean that
+    the last column is `(n-1, ..., 1, 0, 0, -1, ..., - (n-1))` -/
+    (hA' : ∀ i, i.val < n → A i (-1) = n - 1 - i)
+    (hA'' : ∀ i, n ≤ i.val → A i (-1) = n - i)
+    (hA''' : ∀ i j,
+      -- `(i, j)` isn't on the subdiagonal
+      (i + 1 = 0 ∨ i ≠ j + 1) ∧
+      -- `(i, j)` isn't on the last column
+        j + 1 ≠ 0 →
+      A i j = 0) :
     letI AtoEnd : Module.End ℂ (Fin (2 * n) → ℂ) := (A.map (algebraMap ℝ ℂ)).toLin'
     ∃ α : ℂ, α.im ≠ 0 ∧ AtoEnd.HasEigenvalue α := by
   sorry
