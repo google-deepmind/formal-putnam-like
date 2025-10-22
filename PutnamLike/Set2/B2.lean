@@ -16,9 +16,7 @@ limitations under the License.
 
 import Mathlib
 
-noncomputable abbrev putnam_like_set2_b2_solution :
-    (n : ℕ) → (m : ℕ) → Set (Matrix (Fin n) (Fin n) ℝ) :=
-  sorry
+noncomputable abbrev putnam_like_set2_b2_solution : (n : ℕ) → (m : ℕ) → Set (Matrix (Fin n) (Fin n) ℝ) := sorry
 -- fun n m ↦ {- 1}
 
 /--

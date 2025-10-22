@@ -16,9 +16,10 @@ limitations under the License.
 
 import Mathlib
 
-def putnam_like_set4_b5_solution (V : Type*) [AddCommGroup V] [Module ℚ V] : Set (V → V) :=
+-- TODO(lezeau): get a clean way of writing the solution to this problem
+
+abbrev putnam_like_set4_b5_solution (V : Type*) [AddCommGroup V] [Module ℚ V] : Set (V → V) :=
   sorry
-  -- answer was missing from sheet
 
 /--
 Let \(\mathbb{V}\) be a vector space over the field of rational numbers \(\mathbb{Q}\). Find all

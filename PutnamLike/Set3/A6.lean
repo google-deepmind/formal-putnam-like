@@ -33,7 +33,7 @@ open scoped Real
 open scoped symmDiff
 open scoped Topology
 
-abbrev putnam_like_set3_a6_solution : Set ℕ := sorry 
+abbrev putnam_like_set3_a6_solution : Set ℕ := sorry
 -- {(2*d^2) | (d : ℕ) (_ : d ≠ 0)}
 
 /--

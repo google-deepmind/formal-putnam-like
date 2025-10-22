@@ -30,12 +30,12 @@ abbrev putnam_like_set6_a6_solution : ℝ := sorry
 -- 1 - 4096575 / 2 ^ 2024
 
 /-- The set of convex $2025$-gons whose vertices lie on the unit circle. -/
-abbrev Convex2025GonSet : Set (Set (EuclideanSpace ℝ (Fin 2))) :=
+def Convex2025GonSet : Set (Set (EuclideanSpace ℝ (Fin 2))) :=
     {S | ∃ P : Fin 2025 → EuclideanSpace ℝ (Fin 2), S = Set.range P ∧ (∀ i, ‖P i‖ = 1) ∧
       (∀ i j k, i < j → j < k → (∡ (P i) (P j) (P k)).sign = 1)}
 
 /-- The predicate that a set is a $2025$-gon whose vertex angles are obtuse. -/
-abbrev IsConvexObtuse2025GonSet (S : Fin 2025 → EuclideanSpace ℝ (Fin 2)) : Prop :=
+def IsConvexObtuse2025GonSet (S : Fin 2025 → EuclideanSpace ℝ (Fin 2)) : Prop :=
   ∃ P : Fin 2025 → EuclideanSpace ℝ (Fin 2), Set.range S = Set.range P ∧ (∀ i j k, i < j → j < k → (∡ (P i) (P j) (P k)).sign = 1) ∧
     (∀ i, btw (Real.Angle.coe 0) (∡ (P i) (P <| i + 1) (P <| i + 2)) (Real.Angle.coe <| π / 2))
 

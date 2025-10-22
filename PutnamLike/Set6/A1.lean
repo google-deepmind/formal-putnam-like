@@ -19,8 +19,8 @@ import Mathlib
 open Polynomial
 
 /-- Solution: $X ^ 3 - (a^2+2b)*X^2 - (b^2-2ac)X - c^2$-/
-noncomputable abbrev putnam_like_set6_a1_solution : ℝ → ℝ → ℝ → ℝ[X] :=
-  fun a b c ↦ X ^ 3 - (a ^ 2 + 2 * b) • X ^ 2 - (b ^ 2 - 2 * a * c) • X - C (c ^ 2)
+noncomputable abbrev putnam_like_set6_a1_solution : ℝ → ℝ → ℝ → ℝ[X] := sorry
+-- fun a b c ↦ X ^ 3 - (a ^ 2 + 2 * b) • X ^ 2 - (b ^ 2 - 2 * a * c) • X - C (c ^ 2)
 
 /--
 The roots of $x^3 + a x^2 + b x + c = 0$ are $\alpha,$ $\beta$

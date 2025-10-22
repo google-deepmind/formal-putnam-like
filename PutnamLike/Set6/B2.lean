@@ -18,8 +18,8 @@ import Mathlib
 
 open Classical Finset MeasureTheory ProbabilityTheory
 
-abbrev putnam_like_set6_b2_solution (n : ℕ) : NNReal := sorry
--- (n + 1) / (2 * n + 1)
+abbrev putnam_like_set6_b2_solution : ℕ → NNReal := sorry
+-- fun n ↦ (n + 1) / (2 * n + 1)
 
 /--
 A set of $n$ biased coins is given. The $m$-th coin (for $m=1,2,\ldots,n$) has probability

@@ -21,11 +21,13 @@ import Mathlib.Probability.Notation
 open scoped NNReal ProbabilityTheory unitInterval
 
 def putnam_like_set3_a3_sol : ℝ≥0 := sorry
+-- 1 / 91
 
 /--
 There are three balls in the box: green (G), red (R) and blue (B). A player draws the ball
 randomly and returns it with one extra ball of the same colour. Find the probability that among
 $90$ moves the red ball was drawn exactly $45$ times.
+Solution: $1 / 91$
 -/
 theorem putnam_like_set3_a3
     (nextState : ℕ × ℕ × ℕ → I → ℕ × ℕ × ℕ)
