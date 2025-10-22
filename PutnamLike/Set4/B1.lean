@@ -19,7 +19,7 @@ import Mathlib
 open Polynomial
 
 abbrev putnam_like_set4_b1_solution : Prop × Prop := sorry
--- True × False
+-- (True, False)
 
 /--
 Suppose that $P_1$ and $P_2$ are polynomials of real coefficients of degree $1$ and $2$,

@@ -34,7 +34,7 @@ open scoped symmDiff
 open scoped Topology
 
 abbrev putnam_like_set8_b6_solution : Set (ℝ → ℝ) := sorry
--- {(f | ∃ (c d : ℝ), ∀ x > 0, f x = c * x + d)}
+-- {f | ∃ (c d : ℝ), ∀ x > 0, f x = c * x + d}
 
 /--
 Find all twice differentiable functions $f:(0,+\infty)\to\mathbb{R}$ such that

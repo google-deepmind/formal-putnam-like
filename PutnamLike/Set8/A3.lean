@@ -16,8 +16,8 @@ limitations under the License.
 
 import Mathlib
 
-abbrev putnam_like_set8_a3_solution (c : ℝ) : Set ℝ := sorry
--- Set.Ioo 0 (c ^ 3)
+abbrev putnam_like_set8_a3_solution : ℝ → Set ℝ := sorry
+-- fun c ↦ Set.Ioo 0 (c ^ 3)
 
 def convSequences (c : ℝ) : Set (ℕ → ℝ) := { x : ℕ → ℝ | (∀ n, 0 < x n) ∧ HasSum x c }
 

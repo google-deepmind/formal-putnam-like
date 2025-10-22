@@ -33,7 +33,7 @@ open scoped Real
 open scoped symmDiff
 open scoped Topology
 
-abbrev putnam_like_set6_a2_solution : EReal := sorry
+abbrev putnam_like_set6_a2_solution : ℝ := sorry
 -- rexp 1
 
 /--

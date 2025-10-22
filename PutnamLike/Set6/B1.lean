@@ -16,8 +16,8 @@ limitations under the License.
 
 import Mathlib
 
-abbrev putnam_like_set6_b1_solution (n : ℕ) : ℕ × ℕ := sorry
--- (n ^ 2 * (4 * n ^ 2 + 1), n ^ 2 * (4 * n ^ 2 + 1))
+abbrev putnam_like_set6_b1_solution : ℕ → ℕ × ℕ := sorry
+-- fun n ↦ (n ^ 2 * (4 * n ^ 2 + 1), n ^ 2 * (4 * n ^ 2 + 1))
 
 open Classical Finset
 

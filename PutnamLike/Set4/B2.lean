@@ -16,8 +16,8 @@ limitations under the License.
 
 import Mathlib
 
-abbrev putnam_like_set4_b2_solution (n : ℕ) : Set (Fin n → ℝ) := sorry
--- {fun _ ↦ 1}
+abbrev putnam_like_set4_b2_solution : (n : ℕ) → Set (Fin n → ℝ) := sorry
+-- fun n ↦ {fun _ ↦ 1}
 
 /--
 Let $n \geq 3$. Find all solutions $(x_1, x_2, \ldots, x_n)$, with $x_i > 0$ for all
