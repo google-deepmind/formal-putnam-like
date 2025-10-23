@@ -20,8 +20,8 @@ open Submodule
 
 /-- Solution: the set of all functions $f(z) = z_A - z_B$ where $A \oplus B = V$ is a direct sum decomposition of
 $V$ and $z = z_A + z_B$ with $z_A \in A, z_B \in B$. -/
-abbrev putnam_like_set4_b5_solution (V : Type*) [AddCommGroup V] [Module ℚ V] : Set (V → V) := sorry
--- letI f : {p q : Submodule ℚ V} → (IsCompl p q) → (V → V) := fun  hpq ↦ hpq.projection - hpq.symm.projection; {(f hpq) | (p : Submodule ℚ V) (q : Submodule ℚ V) (hpq : IsCompl p q)}
+abbrev putnam_like_set4_b5_solution : ∀ (V : Type) [AddCommGroup V] [Module ℚ V], Set (V → V) := sorry
+-- fun V => letI f : {p q : Submodule ℚ V} → (IsCompl p q) → (V → V) := fun hpq ↦ hpq.projection - hpq.symm.projection; {(f hpq) | (p : Submodule ℚ V) (q : Submodule ℚ V) (hpq : IsCompl p q)}
 
 /--
 Let \(\mathbb{V}\) be a vector space over the field of rational numbers \(\mathbb{Q}\). Find all
@@ -30,6 +30,6 @@ functions \(f : \mathbb{V} \to \mathbb{V}\) satisfying the functional equation:
 f(f(z_1)+z_2)=z_1+f(z_2).
 \end{equation}
 -/
-theorem putnam_like_set4_b5 {V : Type*} [AddCommGroup V] [Module ℚ V] :
+theorem putnam_like_set4_b5 {V : Type} [AddCommGroup V] [Module ℚ V] :
     {f : V → V | ∀ z₁ z₂, f (f z₁ + z₂) = z₁ + f z₂} = putnam_like_set4_b5_solution V := by
   sorry
