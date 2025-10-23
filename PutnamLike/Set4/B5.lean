@@ -16,10 +16,12 @@ limitations under the License.
 
 import Mathlib
 
--- TODO(lezeau): get a clean way of writing the solution to this problem
+open Submodule
 
-abbrev putnam_like_set4_b5_solution (V : Type*) [AddCommGroup V] [Module ℚ V] : Set (V → V) :=
-  sorry
+/-- Solution: the set of all functions $f(z) = z_A - z_B$ where $A \oplus B = V$ is a direct sum decomposition of
+$V$ and $z = z_A + z_B$ with $z_A \in A, z_B \in B$. -/
+abbrev putnam_like_set4_b5_solution (V : Type*) [AddCommGroup V] [Module ℚ V] : Set (V → V) := sorry
+-- letI f : {p q : Submodule ℚ V} → (IsCompl p q) → (V → V) := fun  hpq ↦ hpq.projection - hpq.symm.projection; {(f hpq) | (p : Submodule ℚ V) (q : Submodule ℚ V) (hpq : IsCompl p q)}
 
 /--
 Let \(\mathbb{V}\) be a vector space over the field of rational numbers \(\mathbb{Q}\). Find all
