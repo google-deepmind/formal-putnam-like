@@ -32,3 +32,4 @@ lean_lib PutnamLike where
   globs := #[.submodules `PutnamLike]
 
 require "leanprover-community" / "mathlib" @ "git#v4.22.0"
+  from "../../lean4/mathlib4"
