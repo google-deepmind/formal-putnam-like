@@ -21,8 +21,9 @@ open Polynomial
 def oneDigits (p : ℕ) : Set ℕ :=
   { n > 0 | ∀ i ∈ Nat.digits p n, i = 1 }
 
+/-- All the polynomials $f$ have the form $$ f(x) = \frac{1}{p-1} \left( p^k ( (p-1)x + 1)^n - 1 \right)$$ for $n \geq 0$ and $k \geq 1-n$. -/
 abbrev putnam_like_set7_b4_solution : ℕ → Set ℝ[X] := sorry
--- fun p ↦ { (p - 1 : ℝ)⁻¹ • (p ^ k • ((p - 1) • X + 1) ^ n - 1) | (n) (k ≥ 1 - n)}
+-- fun p ↦ {(p - 1 : ℝ)⁻¹ • ((p : ℝ) ^ k • ((p - 1) • X + 1) ^ n - 1) | (n : ℕ) (k : ℤ) (_ : k ≥ 1 - n)}
 
 /--
 Fix any $p \geq 2$. Let $\mathbb{O}$ denote the set of all positive integers whose all digits in
