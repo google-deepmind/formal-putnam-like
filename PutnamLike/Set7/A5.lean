@@ -18,6 +18,7 @@ import Mathlib
 
 open Filter Topology
 
+/-- Solution: True-/
 abbrev putnam_like_set7_a5_solution : Prop := sorry
 -- True
 
@@ -27,6 +28,6 @@ $(a_k) \subset \mathbb{R}$ is a sequence such that for every $\gamma > 1$,
 $a_{\lfloor \gamma^{m_k} \rfloor} \to 0$ as $k \to \infty$. Is that true that $a_k \to 0$?
 -/
 theorem putnam_like_set7_a5 (m : ℕ → ℕ) (hm_mono : Monotone m) (hm : Tendsto m atTop atTop)
-    (a : ℕ → ℝ) (ha : ∀ γ > 1, Tendsto (fun k => a ⌊γ ^ m k⌋₊) atTop (𝓝 0)) :
+    (a : ℕ → ℝ) (ha : ∀ γ > (1 : ℝ), Tendsto (fun k => a ⌊γ ^ m k⌋₊) atTop (𝓝 0)) :
     Tendsto a atTop (𝓝 0) ↔ putnam_like_set7_a5_solution := by
   sorry
