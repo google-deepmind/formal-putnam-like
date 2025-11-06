@@ -16,8 +16,9 @@ limitations under the License.
 
 import Mathlib
 
+/-- Solution: The solutions to this equation are $f(x) = \frac{1}{1+cx}$ for $c \geq 0$.-/
 abbrev putnam_like_set7_a6_solution : Set (ℝ → ℝ) := sorry
--- {fun x ↦ 1 + c * x | c ≥ 0 }
+-- {f : ℝ → ℝ | ∃ c ≥ 0, Set.EqOn f (fun x ↦ 1 / (1 + c * x)) (Set.Ioi 0)}
 
 /--
 Find all continuous functions $f : (0,\infty) \rightarrow (0,\infty)$ satisfying
