@@ -26,8 +26,8 @@ Show that $\Psi$ is convex.
 theorem putnam_like_set1_b3
     (n p q : ℕ) (hn : n ≠ 0) (hp : p ∈ Set.Ioo 0 q)
     (f : (Fin n → ℝ) → ℝ)
-    (hf : MeasureTheory.Memℒp f p)
-    (hf : MeasureTheory.Memℒp f q)
+    (hf : MeasureTheory.MemLp f p)
+    (hf : MeasureTheory.MemLp f q)
     (ψ : ℝ → ℝ)
     (hψ : ∀ s, ψ s = Real.log (∫ x, (|f x| ^ s))) :
     ConvexOn ℝ (Set.Icc (p : ℝ) q) ψ := by

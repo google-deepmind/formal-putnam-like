@@ -42,7 +42,7 @@ increasing, where $\|\cdot\|$ denotes the Euclidean norm.
 theorem putnam_like_set2_b4
     (x : ℝ → EuclideanSpace ℝ (Fin 3))
     (A : ℝ → Matrix (Fin 3) (Fin 3) ℝ)
-    (hAx : ∀ t, HasDerivAt x (A t *ᵥ x t) t)
+    (hAx : ∀ t, HasDerivAt x ((A t).toEuclideanLin (x t)) t)
     (hx0 : x 0 ≠ 0)
     (hA : ∀ t, A t =
       !![1 + Real.sin t ^ 2, - 1, - 1;
