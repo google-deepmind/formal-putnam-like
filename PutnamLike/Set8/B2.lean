@@ -33,10 +33,8 @@ theorem putnam_like_set8_b2
     -- that satisfy `IsWhiteBallFor k` )
     (IsWhiteBallFor_pred : ∀ boxIdx,
       (Finset.univ.filter (IsWhiteBallFor boxIdx)).card = boxIdx) :
-    {(box, mariaChoice) : Fin 2025 × Multiset (Fin 2024) |
-      mariaChoice.card = 3 ∧
-      ∀ ball ∈ mariaChoice, IsWhiteBallFor box ball}.ncard /
-    {(box, mariaChoice) : Fin 2025 × Multiset (Fin 2024) |
-      mariaChoice.card = 3}.ncard
+    {(box, mariaChoice) : Fin 2025 × (Fin 3 → Fin 2024) |
+      ∀ i, IsWhiteBallFor box (mariaChoice i)}.ncard /
+    (Fintype.card <| Fin 2025 × (Fin 3 → Fin 2024))
       = putnam_like_set8_b2_solution := by
   sorry

@@ -33,6 +33,7 @@ open scoped Real
 open scoped symmDiff
 open scoped Topology
 
+/-- Solution: $n = 2d^2$ for positive $d$. -/
 abbrev putnam_like_set3_a6_solution : Set ℕ := sorry
 -- {(2*d^2) | (d : ℕ) (_ : d ≠ 0)}
 
@@ -42,14 +43,13 @@ Let $J_n$ denote the $n\times n$ matrix with ones in each odd column and zeros i
 1&0& 1 \\
 1&0& 1
 \end{pmatrix}$. For which even integers $n$ does there exist an $n\times n$ matrix $A$ whose entries are all in $\{0,1\}$, such that $A^2=J_n$?
-Solution: $n = 2d^2$ for positive
 -/
 theorem putnam_like_set3_a6
     {J : (n : ℕ) → Matrix (Fin n) (Fin n) ℤ}
-    (hJ : ∀ n i j, J n i j = if 2 ∣ (j.val + 1) then 1 else 0) :
+    (hJ : ∀ n i j, J n i j = if 2 ∣ j.val then 1 else 0) :
     --Formalisation note: here we take `n` positive since this is implicit in the problem
     --but note that the problem still works without this!
     {n | n ≠ 0 ∧ Even n ∧ ∃ A : Matrix (Fin n) (Fin n) ℤ,
-      (∀ i j, A i j ∈ ({-1, 1} : Set ℤ)) ∧ A^2 = J n}
+      (∀ i j, A i j ∈ ({0, 1} : Set ℤ)) ∧ A^2 = J n}
       = putnam_like_set3_a6_solution := by
   sorry
