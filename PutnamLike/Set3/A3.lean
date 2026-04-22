@@ -20,7 +20,7 @@ import Mathlib.Probability.Notation
 
 open scoped NNReal ProbabilityTheory unitInterval
 
-def putnam_like_set3_a3_sol : ℝ≥0 := sorry
+abbrev putnam_like_set3_a3_sol : ℝ≥0 := sorry
 -- 1 / 91
 
 /--

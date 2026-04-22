@@ -28,5 +28,5 @@ Let $f_n(x) =\prod_{i=1}^{n}\cos((2i-1)x)$ for $n\in\mathbb{N}$.
 Find $\liminf_{n\to\infty}\int_0^{2\pi}f_n(x)dx$.
 -/
 theorem putnam_like_set8_a5 :
-    atTop.liminf fun n ↦ ∫ x in (0)..2 * π, prodCos n x = putnam_like_set8_a5_solution := by
+    atTop.liminf (fun n ↦ ∫ x in (0)..2 * π, prodCos n x) = putnam_like_set8_a5_solution := by
   sorry

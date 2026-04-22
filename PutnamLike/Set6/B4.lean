@@ -16,8 +16,10 @@ limitations under the License.
 
 import Mathlib
 
-def putnam_like_set6_b4_solution : ℕ → ℕ := sorry
--- fun n ↦ match n with | 0 => 2 | 1 => 18 | n + 2 => 18 * putnam_like_set6_b4_solution (n + 1) - putnam_like_set6_b4_solution n
+open scoped Matrix
+
+abbrev putnam_like_set6_b4_solution : ℕ → ℤ := sorry
+-- let f : ℕ → (Fin 2 → ℤ) := Nat.rec ![2, 18] (fun _ fn ↦ !![(0 : ℤ), 1; - 1, 18] *ᵥ fn); fun n ↦ f n 0
 
 /--
 Let $n$ be a positive integer. Find the smallest integer greater than $(\sqrt{5}+2)^{2n}$.
