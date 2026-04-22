@@ -30,7 +30,7 @@ $\alpha, \beta$ with $\mathrm{gcd}\, (\alpha, \beta) = 1$, then $\beta$ is odd.
 theorem putnam_like_set1_a3 (f : ℝ → ℝ)
     (a : FormalMultilinearSeries ℝ ℝ ℝ)
     (ha : ∀ n, a n 1 ∈ ({0, 1} : Set ℝ))
-    (hf : ∀ x ∈ Set.Icc 0 1, HasFPowerSeriesWithinAt f a (Set.Icc 0 1) x)
+    (hf : ∀ x ∈ Set.Ico (0 : ℝ) 1, HasSum (fun n => a n 1 * x ^ n) (f x))
     (n : ℕ) (q : ℕ) (hq : Odd q) (hq' : 3 ≤ q)
     (hn : ∃ x : ℚ, f (1 / 2 ^ n) = x) :
     ∃ x : ℚ, x = f (2 / q) ∧ Odd x.den := by

@@ -40,4 +40,4 @@ theorem putnam_like_set3_a3
         (r + g) / (r + g + b : ℝ) ≤ x → nextState (r, g, b) x = (r, g, b + 1)) :
     ℙ {ω : Fin 90 → I |
         let (r, g, b) := ((List.finRange 90).map ω).foldl nextState (1, 1, 1)
-        r = 45} = putnam_like_set3_a3_sol := sorry
+        r = 46} = putnam_like_set3_a3_sol := sorry
