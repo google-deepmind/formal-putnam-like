@@ -16,7 +16,7 @@ limitations under the License.
 
 import Mathlib
 
-open scoped ENNReal
+open scoped NNReal
 
 /--
 Let $f \in L^p (\mathbb{R}^n) \cap L^q (\mathbb{R}^n)$ for some $0 < p < q < +\infty$. Define $\Psi : [p,q] \rightarrow \mathbb{R}$ by
@@ -27,11 +27,11 @@ Show that $\Psi$ is convex.
 -/
 theorem putnam_like_set1_b3
     (n : ℕ) (hn : n ≠ 0)
-    (p q : ℝ≥0∞) (hp : 0 < p) (hpq : p < q) (hq : q < ⊤)
+    (p q : ℝ≥0) (hp : 0 < p) (hpq : p < q)
     (f : (Fin n → ℝ) → ℝ)
     (hf_p : MeasureTheory.MemLp f p)
     (hf_q : MeasureTheory.MemLp f q)
     (ψ : ℝ → ℝ)
     (hψ : ∀ s, ψ s = Real.log (∫ x, (|f x| ^ s))) :
-    ConvexOn ℝ (Set.Icc p.toReal q.toReal) ψ := by
+    ConvexOn ℝ (Set.Icc (p : ℝ) (q : ℝ)) ψ := by
   sorry

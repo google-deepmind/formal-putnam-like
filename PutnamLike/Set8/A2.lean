@@ -30,5 +30,5 @@ theorem putnam_like_set8_a2
     let (a, b, c, d, e) := putnam_like_set8_a2_solution α β
     Parabola a b c d e ∩ {(x, 0) | (x : ℝ)} = {(α, 0)} ∧
       Parabola a b c d e ∩ {(0, y) | (y : ℝ)} = {(0, β)} ∧
-      a * d ≠ b * c := by
+      a ≠ 0 ∧ b ≠ 0 ∧ a * d ≠ b * c := by
   sorry
