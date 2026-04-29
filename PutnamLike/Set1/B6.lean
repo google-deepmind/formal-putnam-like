@@ -34,7 +34,7 @@ in terms of $x_0, \alpha, \beta$.
 -/
 theorem putnam_like_set1_b6
     (x₀ β : ℕ) (α : ℝ) (hα : 0 < α) (hα' : Irrational α)
-    (hαβ : β - α ∈ Set.Ioo 0 1) (hα : ∃ (n : ℕ), α ^ 2 = n)
+    (hαβ : β - α ∈ Set.Ioo 0 1) (hα'' : ∃ (n : ℕ), α ^ 2 = n)
     (x : ℕ → ℕ) (hx₀ : x 0 = x₀) (hx_rec : ∀ n, x (n + 1) = β * x n + ⌊α * x n⌋) :
     letI lim : Filter ℝ := putnam_like_set1_b6_solution x₀ α β
     Filter.atTop.Tendsto (fun n ↦ x n / (α + β) ^ n) lim ∧

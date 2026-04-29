@@ -27,8 +27,8 @@ The roots of $x^3 + a x^2 + b x + c = 0$ are $\alpha,$ $\beta$
 and $\gamma$. Find the cubic polynomial whose roots are
 $\alpha^2$, $\beta^2$, $\gamma^2$.
 -/
-theorem putnam_like_set6_a1 (α β γ : ℝ) (P : ℝ[X])
-    (hP : P.roots = {α, β, γ}) :
+theorem putnam_like_set6_a1 (α β γ : ℝ) (P : ℝ[X]) (hPm : P.Monic)
+    (hPd : P.natDegree = 3) (hP : P.roots = {α, β, γ}) :
     letI Q := putnam_like_set6_a1_solution (P.coeff 2) (P.coeff 1) (P.coeff 0)
     Q.roots = {α ^ 2, β ^ 2, γ ^ 2} := by
   sorry

@@ -37,7 +37,7 @@ def Convex2025GonSet : Set (Set (EuclideanSpace ℝ (Fin 2))) :=
 /-- The predicate that a set is a $2025$-gon whose vertex angles are obtuse. -/
 def IsConvexObtuse2025GonSet (S : Fin 2025 → EuclideanSpace ℝ (Fin 2)) : Prop :=
   ∃ P : Fin 2025 → EuclideanSpace ℝ (Fin 2), Set.range S = Set.range P ∧ (∀ i j k, i < j → j < k → (∡ (P i) (P j) (P k)).sign = 1) ∧
-    (∀ i, btw (Real.Angle.coe 0) (∡ (P i) (P <| i + 1) (P <| i + 2)) (Real.Angle.coe <| π / 2))
+    (∀ i, btw (Real.Angle.coe <| π / 2) (∡ (P i) (P <| i + 1) (P <| i + 2)) (Real.Angle.coe π))
 
 /--
 Suppose that $P_1, P_2, \dots, P_{2025}$ are $2025$ randomly,

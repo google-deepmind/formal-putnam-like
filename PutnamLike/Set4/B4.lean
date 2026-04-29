@@ -28,4 +28,4 @@ for any $k \geq 1$, where $\omega_n$ denotes the surface area of the $(n-1)$-dim
 theorem putnam_like_set4_b4 (n k : ℕ) [NeZero n] (hk : 1 ≤ k) :
     letI normalisationFactor := (volume <| Metric.closedBall (0 : EuclideanSpace ℝ (Fin n)) 1).toReal / 2 ^ n
     (μH[n-1] (Metric.sphere (0 : EuclideanSpace ℝ (Fin n)) 1)).toReal / normalisationFactor / (n ^ k * (2 * k + n))
-      ≤ ∫ x in Metric.closedBall (0 : EuclideanSpace ℝ (Fin n)) 1, |x 0| ^ k := by sorry
+      ≤ ∫ x in Metric.closedBall (0 : EuclideanSpace ℝ (Fin n)) 1, |x 0| ^ (2 * k) := by sorry

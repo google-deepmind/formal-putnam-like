@@ -38,7 +38,8 @@ theorem putnam_like_set4_a3
       Module.End.HasEigenvalue A.toLin' μ → IsSquare μ)
     (PosMinors : ∀ n p, Matrix (Fin n) (Fin n) (ZMod p) → Prop)
     (PosMinors_def : ∀ p n A, PosMinors n p A ↔
-      ∀ m, ∀ ι : Fin m ↪o Fin n, IsSquare (A.submatrix ι ι).det) :
+      ∀ k (hk : k ≤ n),
+        IsSquare (A.submatrix (Fin.castLEOrderEmb hk) (Fin.castLEOrderEmb hk)).det) :
     let (IsTrue, leftImpl, rightImpl) := putnam_like_set4_a3_solution
     (IsTrue ↔ ∀ n ≥ 2, ∀ p A, p.Prime → Good n p A → PosEvalues n p A = PosMinors n p A) ∧
       (leftImpl ↔ ∀ n ≥ 2, ∀ p A, p.Prime → Good n p A → PosEvalues n p A → PosMinors n p A) ∧
