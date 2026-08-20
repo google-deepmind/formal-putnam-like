@@ -17,7 +17,7 @@ limitations under the License.
 import Mathlib
 
 noncomputable abbrev putnam_like_set8_a2_solution : ℝ → ℝ → ℝ × ℝ × ℝ × ℝ × ℝ := sorry
--- fun α β ↦ (β, α, - 2 * α * β ^ 2, - 2 * α ^ 2 * β, α ^ 2 * β ^ 2)
+-- fun α β ↦ (β, - α, - 2 * α * β ^ 2, - 2 * α ^ 2 * β, α ^ 2 * β ^ 2)
 
 /--
 Let $\alpha,\beta>0$. Find the equation of parabola tangent to lines $y=0$ and $x=0$ in points $(\alpha,0)$ and $(0,\beta)$, respectively.
@@ -29,5 +29,6 @@ theorem putnam_like_set8_a2
     (α β : ℝ) (hα : 0 < α) (hβ : 0 < β) :
     let (a, b, c, d, e) := putnam_like_set8_a2_solution α β
     Parabola a b c d e ∩ {(x, 0) | (x : ℝ)} = {(α, 0)} ∧
-      Parabola a b c d e ∩ {(0, y) | (y : ℝ)} = {(0, β)} := by
+      Parabola a b c d e ∩ {(0, y) | (y : ℝ)} = {(0, β)} ∧
+      a ≠ 0 ∧ b ≠ 0 ∧ a * d ≠ b * c := by
   sorry

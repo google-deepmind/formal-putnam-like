@@ -31,7 +31,7 @@ $k^2 P\left( \frac{1}{k} \right) = P_2(k)$ for all $k \in \mathbb{Z}$?
 $\frac{1}{k} Q \left( \frac{1}{k} \right) = \frac{P_1(k)}{P_2(k)}$ for all $k \in \mathbb{Z}$?
 -/
 theorem putnam_like_set4_b1 (P1 P2 : ℝ[X]) (hP1 : P1.degree = 1) (hP2 : P2.degree = 2)
-    (hP2 : ∀ n : ℤ, P2.eval (n : ℝ) ≠ 0) :
+    (hP2nz : ∀ n : ℤ, P2.eval (n : ℝ) ≠ 0) :
     ((∃ P : ℝ[X], ∀ k : ℤ, k ≠ 0 → k ^ 2 * P.eval (1 / k : ℝ) = P2.eval (k : ℝ))
       ↔ putnam_like_set4_b1_solution.1) ∧
     ((∃ Q : ℝ[X], ∀ k : ℤ, k ≠ 0 → (1 / k) * Q.eval (1 / k : ℝ) = P1.eval (k : ℝ) / P2.eval (k : ℝ))

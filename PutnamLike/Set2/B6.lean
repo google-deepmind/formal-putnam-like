@@ -21,10 +21,10 @@ open scoped Real Topology
 /--
 Show that
 \begin{equation*}
-\int_0^{\infty}\frac{e^{-2x}}{1+x^2}dx=\int_0^{\infty}\frac{\cos x}{2+x}dx
+\int_0^{\infty}\frac{e^{-2x}}{1+x^2}dx=\int_0^{\infty}\frac{\sin x}{2+x}dx
 \end{equation*}
 -/
 theorem putnam_like_set2_b6 :
-    Filter.atTop.Tendsto (fun t ↦ ∫ x in Set.Ico 0 t, Real.cos x / (2 + x))
+    Filter.atTop.Tendsto (fun t ↦ ∫ x in Set.Ico 0 t, Real.sin x / (2 + x))
       (𝓝 <| ∫ x in Set.Ici 0, rexp (-2 * x) / (1 + x ^ 2)) := by
   sorry

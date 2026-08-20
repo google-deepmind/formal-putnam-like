@@ -26,5 +26,5 @@ $$
 -/
 theorem putnam_like_set7_a3 {n : ℕ} (hn : 2 ≤ n) (a : Fin n → ℕ) (ha : ∀ i, 0 < a i)
     (σ : Equiv.Perm (Fin n)) :
-    (∏ i, a i ^ a (σ i) / ∏ i, (a i) ! : ℚ) < (∑ i, a i) ^ (∑ i, a i) / (∑ i, a i) ! := by
+    ((∏ i, a i ^ a (σ i) : ℚ) / ∏ i, (a i) !) < (∑ i, a i) ^ (∑ i, a i) / (∑ i, a i) ! := by
   sorry

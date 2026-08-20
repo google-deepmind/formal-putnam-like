@@ -47,6 +47,6 @@ theorem putnam_like_set1_b5
     (n N : ℕ) (hn : n ≠ 0) (hN : N ≠ 0) (r : Fin n → ℝ) (hr : ∀ i, r i ∈ Set.Ioo 0 1)
     (m : Finset (Fin n) → ℝ) (hm : ∀ (S) (hS : S.Nonempty), m S = S.inf' hS r)
     (hm' : m ∅ = 0) :
-    ∑ S : Finset (Fin n), (- 1) ^ S.card * (m S) ^ (2 * N + (∑ i ∈ S, i.val) - 1 : ℝ)
-      / (N + (∑ i ∈ S, i.val)) ≤ 0 := by
+    ∑ S : Finset (Fin n), (- 1) ^ S.card * (m S) ^ (2 * N + (∑ i ∈ S, i.val) + S.card - 1 : ℝ)
+      / (N + (∑ i ∈ S, i.val) + S.card) ≤ 0 := by
   sorry
